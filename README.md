@@ -70,7 +70,7 @@ kubectl port-forward -n openfaas svc/gateway 8080:8080
 kubectl get svc -n openfaas
 ```
 
-### - Built/deploy first function on openfaas
+### - Deploy first function on openfaas
 
 #### 1.Make a directory
 ```bash
@@ -103,11 +103,11 @@ after successfuly build we can check build function
 ```bash
 sudo docker images
 ```
-#### 6. push function image into docker hub
+#### 6. Push function into docker hub
 ```bash
 faas-cli push -f hello-user.yml
 ```
-#### 7. Now we want to deploy our function on openfaas
+#### 7. To deploy function on Openfaas
 ```bash
 faas-cli deploy -f hello-user.yml
 ```
