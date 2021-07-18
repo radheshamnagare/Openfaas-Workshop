@@ -56,6 +56,10 @@ curl -SLsf https://dl.get-arkade.dev/ | sh
 ```bash
 arkade install openfaas
 ```
+Check openfaas services 
+```bash
+kubectl get svc -n openfaas
+```
 
 Check gateway
 ```bash
@@ -65,10 +69,18 @@ Port forwarding (seprete terminal)
 ```bash
 kubectl port-forward -n openfaas svc/gateway 8080:8080
 ```
-#### 6. Check openfaas services 
+ when we installed openfaas that time basic-auth is also there and it is in encrypted form so we want to decrypted it
 ```bash
-kubectl get svc -n openfaas
+PASSWORD=$(kubectl get secret -n openfaas basic-auth -o jsonpath="{.data.basic-auth-password}" | base64 --decode; echo)
+echo -n $PASSWORD | faas-cli login --username admin --password-stdin
 ```
+
+```bash
+echo $PASSWORD
+```
+so we can able to login to openfaas ui --> localhost:8080
+
+
 
 ### - Deploy first function on openfaas
 
