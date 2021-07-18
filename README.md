@@ -41,7 +41,7 @@ Windows users with (Git Bash)
  curl -sL https://cli.openfaas.com | sh
 ```
 
-#### 4.Install the OpenFaaS chart using arkade 
+#### 4.Install the OpenFaaS chart using arkade (recommend)
 
 For MacOS / Linux:
 ```bash
@@ -74,7 +74,7 @@ kubectl get svc -n openfaas
 
 #### 1.Make a directory
 ```bash
-mkdir openfaas_demo && ch openfaas-demo
+mkdir openfaas_demo && cd openfaas-demo
 ```
 
 #### 2.Download template
