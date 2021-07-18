@@ -1,13 +1,9 @@
 # Openfaas-Workshop
 
 - Make sure that you have install docker,kubernates and local cluster minikube install on your machine
-Check Docker & Kubernates version
+Check Docker version
 ```bash
 sudo docker version
-```
-```bash
-minikube start
-kubectl version
 ```
 
 #### 1. first check docker service
@@ -23,7 +19,11 @@ afer that login in to docker hub
 ```bash
 sudo docker login
 ```
-
+check kubernates version
+```bash
+minikube start
+kubectl version
+```
 #### 2.check services on local cluster
 
 ```bash
