@@ -86,7 +86,7 @@ so we can able to login to openfaas ui --> localhost:8080
 
 #### 1.Make a directory
 ```bash
-mkdir openfaas_demo && cd openfaas-demo
+mkdir openfaas_demo & cd openfaas-demo
 ```
 
 #### 2.Download template
